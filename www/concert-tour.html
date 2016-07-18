@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+<head>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Purple Tunez</title>
+    <link href=
+    "css/foundation.css" rel=
+    "stylesheet">
+     <link href=
+    "css/event.css" rel=
+    "stylesheet">
+    <link href=
+    "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
+    rel="stylesheet" type="text/css">
+    <script src="js/vendor/jquery.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <meta class="foundation-mq">
+    <title>Purple Tunez</title>
+    <title>Purple Tunez</title>
+</head>
+<body>
+<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Sean Tizzle - Like To Party','url':'https://www.youtube.com/watch?v=a0V2XpIj7Ow'},{'title':'Bryson Tyler - Exchange','url':'https://www.youtube.com/watch?v=aj9coPGuFkM'},{'title':'Runtown - Latest','url':'https://www.youtube.com/watch?v=8JhyDe16B4w'},{'title':'L.A.X - OLE','url':'https://www.youtube.com/watch?v=VDrVEVLXVa8'},{'title':'Iyanya - Heartbeat','url':'https://www.youtube.com/watch?v=_0Jl5doWW7s'},{'title':'M60 - Funmi','url':'https://soundcloud.com/m60beats/funmi-prod-lttb'},{'title':'French Montana ft Kodak - Lockjaw','url':'https://www.youtube.com/watch?v=pIHR7rUeGTc'},{'title':'Samkul - Juice','url':'https://www.youtube.com/watch?v=OwxqZRzks6g'}]}" ></script><noscript><a href="http://playlist.me/w/i.php">SCM music player</a></noscript><!-- playlist.me script end -->
+
+<style>
+.event {
+  padding: 1rem 1rem 1rem 0;
+  display: table; }
+
+.event-date {
+  width: 6rem;
+  margin: 0 auto 1rem;
+  display: table-cell;
+  width: auto; }
+  .event-date .event-month {
+    margin: 0;
+    background: #eee;
+    padding: 0.5rem 2rem;
+    text-align: center; }
+  .event-date .event-day {
+    margin: 0;
+    border: 1px solid #eee;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 2rem; }
+
+.event-desc {
+  padding: 0 0 0 1rem;
+  text-align: left;
+  display: table-cell;
+  vertical-align: top; }
+  .event-desc .event-desc-header {
+    margin: 0 0 0.5rem 0;
+    padding: 0; }
+  .event-desc .event-desc-detail {
+    margin: 0 0 0.25rem;
+    padding: 0; }
+  .event-desc .event-desc-time {
+    font-weight: bold; }
+  .event-desc .rsvp.button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0; }
+    .current:hover {
+        background: #800080 !important;
+    }
+</style>
+   <div id="header"></div>
+
+
+
+<div class="row">
+  <div id="divID" class="small-9 columns small-centered"></div>
+
+
+           <ul aria-label="Pagination" class="pagination" role=
+                "navigation" style="    margin-left: 10rem;">
+
+                    <li   >
+                        <a id="prev" aria-label="Prev page"onClick="prevPage(currentPage)">Previous <span class=
+                        "show-for-sr">page</span></a>
+                    </li>
+                    <li >
+                        <a id="p1" aria-label="Page 1" onClick="showPage(1)">1</a>
+                    </li>
+                    <li >
+                        <a id="p2" aria-label="Page 2" onClick="showPage(2)">2</a>
+                    </li>
+                    <li >
+                        <a id="p3" aria-label="Page 3" onClick="showPage(3)">3</a>
+                    </li>
+                    <li  >
+                        <a id="next" aria-label="Next page" onClick="nextPage(currentPage)">Next <span class=
+                        "show-for-sr">page</span></a>
+                    </li>
+                </ul>
+</div>
+
+
+    <script type="text/javascript">
+
+        var currentPage;
+        var maxPageNumber = 3;
+
+        function showPage(pageNumber, op) {
+          console.log("here00" + pageNumber +"  "+ maxPageNumber);
+          if(pageNumber > 0 && pageNumber <= maxPageNumber){
+            console.log("here11");
+            window.location.href = 'concert-tour.html?page='+pageNumber; 
+          }
+
+        }
+        function nextPage(pageNumber) {
+          pageNumber = parseInt(pageNumber) + 1;
+          console.log("here00" + pageNumber +"  "+ maxPageNumber);
+          if(pageNumber > 0 && pageNumber <= maxPageNumber){
+            console.log("here11");
+            window.location.href = 'concert-tour.html?page='+pageNumber; 
+          }
+        }
+        function prevPage(pageNumber) {
+          pageNumber = parseInt(pageNumber) - 1;
+          console.log("here00" + pageNumber +"  "+ maxPageNumber);
+          if(pageNumber > 0 && pageNumber <= maxPageNumber){
+            console.log("here11");
+            window.location.href = 'concert-tour.html?page='+pageNumber; 
+          }
+        }
+
+        function truncate( n, useWordBoundary ){
+            var isTooLong = this.length > n,
+                s_ = isTooLong ? this.substr(0,n-1) : this;
+                s_ = (useWordBoundary && isTooLong) ? s_.substr(0,s_.lastIndexOf(' ')) : s_;
+            return  isTooLong ? s_ + '&hellip;' : s_;
+        }
+
+        function getParameterByName(name, callback) {
+          var url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return callback(decodeURIComponent(results[2].replace(/\+/g, " ")));
+      }
+
+            /***SECTION 2 : get Data from perl script***/
+        function getNMusicData(pageNumber, callback) {
+
+          console.log("get music page called");
+            var requestData = "";              
+            $.ajax({
+                type: "GET",
+                url: "http://purpletunez.herokuapp.com/api/events/page", // URL of the Perl script
+                //dataType: 'json',
+                data: {
+                    "pageNumber": pageNumber,
+                    "pageSize":4
+                },
+
+                // script call was *not* successful
+                error: function(error) {
+                    console.log(error);
+                },
+
+                // script call was successful 
+                success: function(news_data) {
+                    console.log(news_data);
+                    //alert(news_data);
+                   // requestData = perl_data;
+                    //convert to 2d array
+                   // var jsonData = JSON.parse("[" + requestData + "]");                   
+                  return callback(news_data);
+                }
+            });         
+
+        }
+
+
+        getParameterByName('page',  function(returnedID) {
+
+          currentPage = returnedID;
+           $("#p"+returnedID).addClass("current");
+           //$("#p"+returnedID).addClass("disabled");
+
+           $("#prev").removeClass("disabled");
+           $("#next").removeClass("disabled");
+
+          if(currentPage == 1){
+            $("#prev").addClass("disabled");
+          }
+          if (currentPage == maxPageNumber) {
+            $("#next").addClass("disabled");
+          }
+
+          var month = new Array();
+          month[0] = "January";
+          month[1] = "February";
+          month[2] = "March";
+          month[3] = "April";
+          month[4] = "May";
+          month[5] = "June";
+          month[6] = "July";
+          month[7] = "August";
+          month[8] = "September";
+          month[9] = "October";
+          month[10] = "November";
+          month[11] = "December";
+          getNMusicData(returnedID,  function(data) {
+
+                  for (var i = 0; i < data.length; i++) {
+                   var article=document.createElement("article");
+                   article.setAttribute("class", "event");
+                   var newDate = new Date(data[i].date);
+                   article.innerHTML = ("<div class='event-date'><p class='event-month'>"+month[newDate.getMonth()]+"</p><p class='event-day'>"+newDate.getDay()+"</p></div><div class='event-desc'><h4 class='event-desc-header'>"+data[i].artist +"</h4><p class='event-desc-detail'><span class='event-desc-time'></span>"+data[i].location+"</p><a href="+ data[i].eventURL+" class='rsvp button'>RSVP &amp; Details</a></div> <hr>");
+
+                    var dataContainer = document.getElementById('divID');
+                   dataContainer.appendChild(article);
+
+
+                 }
+          });
+
+        });
+
+      </script>
+</body>
+<div id="footer"></div>
+
+</html>

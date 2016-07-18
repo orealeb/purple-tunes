@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html class="" lang="en">
+<head>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Purple Tunez</title>
+    <link href=
+    "css/foundation.css" rel=
+    "stylesheet">
+    <link href=
+    "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
+    rel="stylesheet" type="text/css">
+    <script src="js/vendor/jquery.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <meta class="foundation-mq">
+    <title>Purple Tunez</title>
+    <title>Purple Tunez</title>
+</head>
+<body>
+<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Sean Tizzle - Like To Party','url':'https://www.youtube.com/watch?v=a0V2XpIj7Ow'},{'title':'Bryson Tyler - Exchange','url':'https://www.youtube.com/watch?v=aj9coPGuFkM'},{'title':'Runtown - Latest','url':'https://www.youtube.com/watch?v=8JhyDe16B4w'},{'title':'L.A.X - OLE','url':'https://www.youtube.com/watch?v=VDrVEVLXVa8'},{'title':'Iyanya - Heartbeat','url':'https://www.youtube.com/watch?v=_0Jl5doWW7s'},{'title':'M60 - Funmi','url':'https://soundcloud.com/m60beats/funmi-prod-lttb'},{'title':'French Montana ft Kodak - Lockjaw','url':'https://www.youtube.com/watch?v=pIHR7rUeGTc'},{'title':'Samkul - Juice','url':'https://www.youtube.com/watch?v=OwxqZRzks6g'}]}" ></script><noscript><a href="http://playlist.me/w/i.php">SCM music player</a></noscript><!-- playlist.me script end -->
+
+	<style>
+    .btn-img {
+        /**width: 100px;**/
+        position: relative;
+        /**opacity: 0.5;**/
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    .btn-img:hover {
+        transform: scale(1.5, 1.5);
+        /**opacity: 1;**/
+    }
+    </style>
+
+   <div id="header"></div>
+    <hr>
+
+
+
+  <!-- Main Page Content and Sidebar -->
+  <div class="row">
+    <!-- Main Blog Content -->
+    <div id="divID" class="large-9 columns" role="content">
+ 
+
+  <script type="text/javascript">
+        function getParameterByName(name, callback) {
+          var url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return callback(decodeURIComponent(results[2].replace(/\+/g, " ")));
+      }
+
+            /***SECTION 2 : get Data from perl script***/
+        function getArtistData(id, callback) {
+
+          console.log("get artist page called");
+            var requestData = "";              
+            $.ajax({
+                type: "POST",
+                url: "http://purpletunez.herokuapp.com/api/artist/get", // URL of the Perl script
+                //dataType: 'json',
+                data: {
+                    "transactionID": id
+                },
+
+                // script call was *not* successful
+                error: function() {
+                    alert("script call was not successful");
+                },
+
+                // script call was successful 
+                success: function(news_data) {
+                    console.log(news_data);
+                    //alert(news_data);
+                   // requestData = perl_data;
+                    //convert to 2d array
+                   // var jsonData = JSON.parse("[" + requestData + "]");                   
+                  return callback(news_data);
+                }
+            });         
+
+        }
+
+
+        getParameterByName('id',  function(returnedID) {
+
+          getArtistData(returnedID,  function(data) {
+
+                   var article=document.createElement("article");
+                   var newDate = new Date(data.date);
+                   article.innerHTML = ("<img align='left' class='btn-img'  alt='image for artist' style='height: 300px; width: 400px;  padding: 15px;' src="+data.imageURL  +" /><h5 class='panel'>"+data.name+"</h5><p>"+ data.bio+"</p>");
+
+                    var dataContainer = document.getElementById('divID');
+                     dataContainer.appendChild(article);
+       
+          });
+
+        });
+
+      </script>
+
+      <!--article>
+ 
+        <h3><a href="#">AD ft. Solidstar – Young Girl (Prod. By P Banks)</a></h3>
+        <h6>Written by <a href="#">Elijah Okpogie</a> on May 9, 2016.</h6>
+ 
+        <div class="row">
+          <div class="large-6 columns">
+            <p>AD is back with another hot banger this time AD teams up with Solidstar and the hit record was produced by P Banks, AD who won Bayelsa Media Award (BMA) as the best artist of the year and best musical artist of the year 2016, to kick start the year Enjoy the brand new song titled Young Girl featuring Solidstar, enjoy below. <br><br> ENJOY!</p>
+          </div>
+          <div class="large-6 columns">
+            <img  style="height: 200px; width: 400px;"  src="http://musikupdate.com/wp-content/uploads/2016/05/AD-YOUNG-Girl-Artwork-1024x1024.jpg" />
+          </div>
+        </div>
+      </article-->
+
+
+    </div>
+    <!-- End Main Content -->
+
+
+   <!--div class="row" style="max-height: 140px">
+        <iframe style="border:none" src="http://files.podsnack.com/iframe/embed.html?hash=avxnau11&t=1464679897" width="395" height="65" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div-->
+<hr>
+<br>
+<br>
+
+
+
+</body>
+<div id="footer"></div>
+
+</html>
