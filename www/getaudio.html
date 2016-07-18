@@ -25,7 +25,7 @@
     <title>Purple Tunes</title>
 </head>
 <body>
-<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Sean Tizzle - Like To Party','url':'https://www.youtube.com/watch?v=a0V2XpIj7Ow'},{'title':'Bryson Tyler - Exchange','url':'https://www.youtube.com/watch?v=aj9coPGuFkM'},{'title':'Runtown - Latest','url':'https://www.youtube.com/watch?v=8JhyDe16B4w'},{'title':'L.A.X - OLE','url':'https://www.youtube.com/watch?v=VDrVEVLXVa8'},{'title':'Iyanya - Heartbeat','url':'https://www.youtube.com/watch?v=_0Jl5doWW7s'},{'title':'M60 - Funmi','url':'https://soundcloud.com/m60beats/funmi-prod-lttb'},{'title':'French Montana ft Kodak - Lockjaw','url':'https://www.youtube.com/watch?v=pIHR7rUeGTc'},{'title':'Samkul - Juice','url':'https://www.youtube.com/watch?v=OwxqZRzks6g'}]}" ></script><noscript><a href="http://playlist.me/w/i.php">SCM music player</a></noscript><!-- playlist.me script end -->
+<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript><!-- playlist.me script end -->
 
 	<style>
     .fi-social-facebook{color:dodgerblue;font-size:2rem;}.fi-social-youtube{color:red;font-size:2rem;}.fi-social-pinterest{color:darkred;font-size:2rem;}i.fi-social-instagram{color:brown;font-size:2rem;}i.fi-social-tumblr{color:navy;font-size:2rem;}.fi-social-twitter{color:skyblue;font-size:2rem;}
@@ -111,7 +111,10 @@
                      var musicPlayer =  document.createElement("div");
                      dataContainer.setAttribute("class", "row");
                      dataContainer.setAttribute("style", "max-height: 140px");
-                     musicPlayer.innerHTML  = ("<iframe style='border:none' src='"+ data.audioURL +"' width='395' height='65' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>");
+                     musicPlayer.innerHTML  = ("<audio controls><source src='" + data.audioURL +"' type='audio/ogg'>Your browser does not support the audio element.</audio>");
+
+
+                      //<iframe style='border:none' src='"+ data.audioURL +"' width='395' height='65' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>");
                      dataContainer.appendChild(musicPlayer);
         
           });
