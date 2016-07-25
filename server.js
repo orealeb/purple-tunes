@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/www"));
 app.use(function (req, res, next) {
 
-    var allowedOrigins = ['https://localhost:5000','http://localhost:5000'];//, 'https://purple-tunes.com', 'http://purple-tunes.com', '*.heroku.com','*.herokuapp.com'];
+    var allowedOrigins = ['https://localhost:5000','http://localhost:5000', 'https://purple-tunes.com', 'http://purple-tunes.com', '*.heroku.com','*.herokuapp.com'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);
@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
     // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
 
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
