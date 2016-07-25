@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/www"));
 app.use(function (req, res, next) {
 
-    var allowedOrigins = ['https://localhost:5000','http://localhost:5000', 'https://purple-tunes.com', 'http://purple-tunes.com', '*.heroku.com','*.herokuapp.com'];
+    var allowedOrigins = ['https://localhost:5000','http://localhost:5000', 'https://purple-tunes.com', 'http://purpletunezform.herokuapp.com/', 'http://purple-tunes.com', '*.heroku.com','*.herokuapp.com'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);
