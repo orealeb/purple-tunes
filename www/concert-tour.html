@@ -218,7 +218,7 @@
                    var article=document.createElement("article");
                    article.setAttribute("class", "event");
                    var newDate = new Date(data[i].date);
-                   article.innerHTML = ("<div class='event-date'><p class='event-month'>"+month[newDate.getMonth()]+"</p><p class='event-day'>"+newDate.getDay()+"</p></div><div class='event-desc'><h4 class='event-desc-header'>"+data[i].artist +"</h4><p class='event-desc-detail'><span class='event-desc-time'></span>"+data[i].location+"</p><a href="+ data[i].eventURL+" class='rsvp button'>RSVP &amp; Details</a></div> <hr>");
+                   article.innerHTML = ("<div class='event-date'><p class='event-month'>"+month[newDate.getMonth()]+"</p><p class='event-day'>"+newDate.getDate()+"</p></div><div class='event-desc'><h4 class='event-desc-header'>"+data[i].artist +"</h4><p class='event-desc-detail'><span class='event-desc-time'></span>"+data[i].location+"</p><a href="+ data[i].eventURL+" class='rsvp button'>RSVP &amp; Details</a></div> <hr>");
 
                     var dataContainer = document.getElementById('divID');
                    dataContainer.appendChild(article);

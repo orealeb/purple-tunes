@@ -206,7 +206,7 @@
                   for (var i = 0; i < data.length; i++) {
                    var article=document.createElement("article");
                    var newDate = new Date(data[i].date);
-                   article.innerHTML = ("<div class='row'><div class=large-6 columns'><p><a href='getvideo.html?id="+data[i]._id+"'><img align='left'  class='btn-img'  alt='image for article' style='height: 200px; width: 400px; padding: 15px;' src='"+data[i].imageURL+"''></p> </a></div><div class='large-6 columns' ><h5> <a href='getvideo.html?id="+data[i]._id+"'>"+data[i].title+"</a></h5><p></a></h5></div><span><i class='fi-calendar'> "+  month[newDate.getMonth()] + ' ' +  newDate.getDay() + ', ' +  newDate.getFullYear()   +"&nbsp;&nbsp;</i></span><p>"+ data[i].text +"<br> <a href='getvideo.html?id="+data[i]._id+"'> More >> </a></p></div></div><hr />");
+                   article.innerHTML = ("<div class='row'><div class=large-6 columns'><p><a href='getvideo.html?id="+data[i]._id+"'><img align='left'  class='btn-img'  alt='image for article' style='height: 200px; width: 400px; padding: 15px;' src='"+data[i].imageURL+"''></p> </a></div><div class='large-6 columns' ><h5> <a href='getvideo.html?id="+data[i]._id+"'>"+data[i].title+"</a></h5><p></a></h5></div><span><i class='fi-calendar'> "+ month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear()   +"&nbsp;&nbsp;</i></span><p>"+ data[i].text +"<br> <a href='getvideo.html?id="+data[i]._id+"'> More >> </a></p></div></div><hr />");
 
                     var dataContainer = document.getElementById('divID');
                         dataContainer.setAttribute("class", "large-8 columns");
