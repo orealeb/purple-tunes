@@ -1,6 +1,6 @@
 # Purple Tunes
 
-## TODO.md for todo
+## Check TODO.md for todo
 
 ## How to Contribute
 - Checkout branch with your name:  git checkout -b myname
