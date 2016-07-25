@@ -1,4 +1,5 @@
 # Purple Tunes
+<img src="http://purple-tunes.com/img/logo.png" alt="Purple Tunes logo" height="100" width="150">
 
 ## Check TODO.md for todo
 
