@@ -219,7 +219,7 @@
                   for (var i = 0; i < data.length; i++) {
                    var article=document.createElement("article");
                    var newDate = new Date(data[i].date);
-                   article.innerHTML = ("<div class='row'><div class='small-12 columns'><h3><a href='getnews.html?id="+data[i]._id+"'>"+data[i].title+"</a></h3><h6>Written by <a href='#'> "+data[i].author+"</a> on "+ month[newDate.getMonth()] + ' ' +  newDate.getDay() + ', ' +  newDate.getFullYear()   +".</h6><a href='getnews.html?id="+data[i]._id+"'><img  style='height: 200px; width: 400px;' align='right' style='max-width:30%;' src='"+data[i].imageURL+"'/></a>"+ truncate.apply(data[i].text, [(data[i].text.length - 100), true]) +"<br> <a href='getnews.html?id="+data[i]._id+"'> More >> </a></div></div><hr />");
+                   article.innerHTML = ("<div class='row'><div class='small-12 columns'><h3><a href='getnews.html?id="+data[i]._id+"'>"+data[i].title+"</a></h3><h6>Written by <a href='#'> "+data[i].author+"</a> on "+ month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear()   +".</h6><a href='getnews.html?id="+data[i]._id+"'><img  style='height: 200px; width: 400px;' align='right' style='max-width:30%;' src='"+data[i].imageURL+"'/></a>"+ truncate.apply(data[i].text, [(data[i].text.length - 100), true]) +"<br> <a href='getnews.html?id="+data[i]._id+"'> More >> </a></div></div><hr />");
                     var dataContainer = document.getElementById('divID');
                     dataContainer.setAttribute("class", "large-12 columns");
                    dataContainer.setAttribute("role", "content");

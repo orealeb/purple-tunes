@@ -12,7 +12,7 @@
     "css/pagination.css" rel=
     "stylesheet">
     <link href=
-    "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
+    "css/foundation-icons.css"
     rel="stylesheet" type="text/css">
     <script src="js/vendor/jquery.js"></script>
     <script> 
@@ -28,7 +28,7 @@
     <title>Purple Tunes</title>
 </head>
 <body>
-<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript><!-- playlist.me script end -->
+<!-- Song Player http://playlist.me ><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript><playlist.me script end -->
 
 	<style>
     .btn-img {
@@ -207,7 +207,7 @@
                   for (var i = 0; i < data.length; i++) {
                    var article=document.createElement("article");
                    var newDate = new Date(data[i].date);
-                   article.innerHTML = ("<div class='row'><div class=large-6 columns'><p><a href='getaudio.html?id="+data[i]._id+"'><img align='left'  class='btn-img'  alt='image for article' style='height: 200px; width: 400px; padding: 15px;' src='"+data[i].imageURL+"''></p> </a></div><div class='large-6 columns' ><h5> <a href='getaudio.html?id="+data[i]._id+"'>"+data[i].title+"</a></h5><p></a></h5></div><span><i class='fi-calendar'> "+  month[newDate.getMonth()] + ' ' +  newDate.getDay() + ', ' +  newDate.getFullYear()   +"&nbsp;&nbsp;</i></span><p>"+  data[i].text +"<br> <a href='getaudio.html?id="+data[i]._id+"'> More >> </a></p></div></div><hr />");
+                   article.innerHTML = ("<div class='row'><div class=large-6 columns'><p><a href='getaudio.html?id="+data[i]._id+"'><img align='left'  class='btn-img'  alt='image for article' style='height: 200px; width: 400px; padding: 15px;' src='"+data[i].imageURL+"''></p> </a></div><div class='large-6 columns' ><h5> <a href='getaudio.html?id="+data[i]._id+"'>"+data[i].title+"</a></h5><p></a></h5></div><span><i class='fi-calendar'> "+  month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear()   +"&nbsp;&nbsp;</i></span><p>"+  data[i].text +"<br> <a href='getaudio.html?id="+data[i]._id+"'> More >> </a></p></div></div><hr />");
 
                     var dataContainer = document.getElementById('divID');
                         dataContainer.setAttribute("class", "large-8 columns");
