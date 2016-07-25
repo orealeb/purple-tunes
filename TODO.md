@@ -8,7 +8,7 @@
 - Add event posts
 - Allow contact page form post data
 - Show how to make new post to abdul...
-- Create Event form should have both date and time input
+- Create Event form in purpletunezform.herokuapp.com should have both date and time input
 
 ### Later
 - Minify code
