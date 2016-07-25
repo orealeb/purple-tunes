@@ -10,5 +10,6 @@
 - Create Event form should have both date and time input
 
 ### Later
+- Fix security and CORS issues
 - Try to automate Twitter posts using Twitter API
 - Try to automate Dropbox file upload using Dropbox API
