@@ -1,6 +1,7 @@
 ## TODO: ##
 ### Now
 - <b> Allow only music/entertainment news on website </b>
+- Remove useless files
 - Add background music player - scmplayer.net
 - Fix mobile ui
 - Add album posts
@@ -10,6 +11,7 @@
 - Create Event form should have both date and time input
 
 ### Later
+- Minify code
 - Fix security and CORS issues
 - Try to automate Twitter posts using Twitter API
 - Try to automate Dropbox file upload using Dropbox API
