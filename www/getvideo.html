@@ -11,7 +11,7 @@
     "css/foundation.css" rel=
     "stylesheet">
     <link href=
-    "http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
+    "css/foundation-icons.css"
     rel="stylesheet" type="text/css">
     <script src="js/vendor/jquery.js"></script>
     <script> 
@@ -25,7 +25,7 @@
     <title>Purple Tunes</title>
 </head>
 <body>
-<!-- Song Player http://playlist.me --><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript><!-- playlist.me script end -->
+<!-- Song Player http://playlist.me ><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript>< playlist.me script end -->
 
 	<style>
     .btn-img {
@@ -73,7 +73,7 @@
             var requestData = "";              
             $.ajax({
                 type: "POST",
-                url: "http://purpletunez.herokuapp.com/api/music/get", // URL of the Perl script
+                url: "https://purpletunez.herokuapp.com/api/music/get", // URL of the Perl script
                 //dataType: 'json',
                 data: {
                     "transactionID": id
@@ -110,7 +110,7 @@
           month[9] = "October";
           month[10] = "November";
           month[11] = "December";
-          
+
         getParameterByName('id',  function(returnedID) {
 
           getNMusicData(returnedID,  function(data) {
