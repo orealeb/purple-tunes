@@ -116,7 +116,7 @@
 
                    var article=document.createElement("article");
                    var newDate = new Date(data.date);
-                   article.innerHTML = ("<h3><a href='#'>"+data.title+"</a></h3> <h6>Written by <a href='#'>"+data.author+"</a> on " + month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear() +".</h6> <div class='row'> <div class='large-6 columns'> <p>"+  data.text +" <br><br> ENJOY!</p> </div> <div class='large-6 columns'> <img style='height: 200px; width: 400px;' src='"+data.imageURL+"'' /> </div> </div>");
+                   article.innerHTML = ("<h3><a href='#'>"+data.title+"</a></h3> <h6>Written by <a href='#'>"+data.author+"</a> on " + month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear() +".</h6> <div class='row'> <div class='large-6 columns'> <p>"+  data.text +" <br><br> ENJOY!</p> </div> <div class='large-6 columns'> <img style='height: 400px; width: 400px;' src='"+data.imageURL+"'' /> </div> </div>");
 
                     var dataContainer = document.getElementById('divID');
                      dataContainer.appendChild(article);
