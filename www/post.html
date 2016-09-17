@@ -45,8 +45,8 @@ mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script>< end Mixpanel -->
             <div class="col-md-4 sidebar-gutter">
             	<div id="sidebar"></div>
             </div>
-		</section>
 		</div><!-- /.container -->
+		</section>
 
 
 
@@ -117,15 +117,15 @@ mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script>< end Mixpanel -->
                    article.innerHTML = ("<div class='blog-post-image'><a href='#'>"+data.title+"<img src='"+data.imageURL+"''></a></div><div class='blog-post-body'><h2><a href='#'>"+data.title+"</a></h2><div class='post-meta'><span>by <a href='#''>"+data.author+"</a></span>/<span><i class='fa fa-clock-o'></i>" + month[newDate.getMonth()] + ' ' +  newDate.getDate() + ', ' +  newDate.getFullYear() +"</span>/<span><i class='fa fa-comment-o'></i> <a href='#'>343</a></span></div><div class='blog-post-text'>"+  data.text +"</div></div>");
 
                     var dataContainer = document.getElementById('divID');
-                     dataContainer.appendChild(article);
 
                      var musicPlayer =  document.createElement("div");
-                     dataContainer.setAttribute("class", "row");
-                     dataContainer.setAttribute("style", "max-height: 140px");
+                     //dataContainer.setAttribute("class", "row");
+                     //dataContainer.setAttribute("style", "max-height: 140px");
                      musicPlayer.innerHTML  = ("<audio controls><source src='" + data.audioURL +"' type='audio/ogg'>Your browser does not support the audio element.</audio>");
 
 
                       //<iframe style='border:none' src='"+ data.audioURL +"' width='395' height='65' allowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true'></iframe>");
+                    dataContainer.appendChild(article);
                      dataContainer.appendChild(musicPlayer);
         
           });
