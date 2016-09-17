@@ -1,111 +1,100 @@
 <!DOCTYPE html>
-<html class="" lang="en">
-<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+<html lang="en">
+<!-- start Mixpanel ><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script><!-- end Mixpanel -->
-<head>
-    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Purple Tunes</title>
-    <link href=
-    "css/foundation.css" rel=
-    "stylesheet">
-    <link href=
-    "css/foundation-icons.css"
-    rel="stylesheet" type="text/css">
-    <script src="js/vendor/jquery.js"></script>
-    <script> 
-        mixpanel.track("news-magazine page load");
+mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script>< end Mixpanel -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
+    	<title>Purple Tunes</title>
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!-- Custom styles for this template -->
+		<link href="css/jquery.bxslider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script src="js/vendor/jquery.js"></script>
+	    <script> 
+	        //mixpanel.track("home page load page load");
 
-        $(function(){
-          $("#header").load("header.html"); 
-          $("#footer").load("footer.html"); 
-          $("#socialmedialinks").load("socialmedialinks.html");
-        });
-    </script> 
-    <meta class="foundation-mq">
-    <title>Purple Tunes</title>
-</head>
-  <style>
+	        $(function(){
+	          $("#headerNavBar").load("headerNavBar.html"); 
+	          $("#footer").load("footer.html"); 
+	          $("#sidebar").load("socialmedialinks.html");
+	        });
+	    </script> 
+	</head>
 
-    .btn-img {
-        /**width: 100px;**/
-        position: relative;
-        /**opacity: 0.5;**/
-        transition: 0.3s ease;
-        cursor: pointer;
-    }
+	<body>
+		
+   <div id="headerNavBar"></div>
 
-    .btn-img:hover {
-        transform: scale(1.5, 1.5);
-        /**opacity: 1;**/
-    }
+		<div class="container">
+	
+		<section  class="main-slider">
 
-    </style>
-<body>
-
-<!-- Song Player http://playlist.me ><script type="text/javascript" src="http://playlist.me/w/script.js" data-config="{'skin':'skins/purple/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':'https://soundcloud.com/purple-tunes/sets/naija-hits'}" ></script><noscript><a href="http://playlist.me/skins/">SCM player skins</a></noscript>< playlist.me script end -->
+			<ul id="bigBanner" class="bxslider">
+				<!--li><div class="slider-item"><img src="images/1140x500-2.jpg" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your Home</a></h2></div></li>
+				<li><div class="slider-item"><img src="images/1140x500-1.jpg" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your Home</a></h2></div></li>
+				<li><div class="slider-item"><img src="images/1140x500-3.jpg" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your Home</a></h2></div></li-->
+			</ul>
 
 
-<script type="text/javascript">
-   /** $(document).ready(function(){
-      window.onload = function () {
-
-       setTimeout(function(){
-
-    var dataContainer = document.getElementById('player'); console.log(dataContainer); 
-      alert(dataContainer);
-
-      }, 5000);
-  
-  }
-    }) **/
-   // var dataContainer = document.getElementById('tooltip'); console.log(dataContainer);
-       //dataContainer.setAttribute("style", "background-color: white !important; background-image: none !important;" );
-
-</script>
+		</section>
+		<section>
+			<div class="row">
+				<div id="divID" class="col-md-8">
 
 
-   <div id="header"></div>
+					<!--article class="blog-post">
+						<div class="blog-post-image">
+							<a href="post.html"><img src="images/750x500-1.jpg" alt=""></a>
+						</div>
+						<div class="blog-post-body">
+							<h2><a href="post.html">Vintage-Inspired Finds for Your Home</a></h2>
+							<div class="post-meta"><span>by <a href="#">Jamie Mooze</a></span>/<span><i class="fa fa-clock-o"></i>March 14, 2015</span>/<span><i class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
+							<p>ew months ago, we found ridiculously cheap plane tickets for Boston and off we went. It was our first visit to the city and, believe it or not, Stockholm in February was more pleasant than Boston in March. It probably has a lot to do with the fact that we arrived completely unprepared. That I, in my converse and thin jacket, did not end up with pneumonia is honestly not even fair.</p>
+							<div class="read-more"><a href="#">Continue Reading</a></div>
+						</div>
+					</article>
+					<article class="blog-post">
+						<div class="blog-post-image">
+							<a href="post.html"><img src="images/750x500-2.jpg" alt=""></a>
+						</div>
+						<div class="blog-post-body">
+							<h2><a href="post.html">The Best Street Style Looks of London Fashion Week</a></h2>
+							<div class="post-meta"><span>by <a href="#">Jamie Mooze</a></span>/<span><i class="fa fa-clock-o"></i>March 14, 2015</span>/<span><i class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
+							<p>Few months ago, we found ridiculously cheap plane tickets for Boston and off we went. It was our first visit to the city and, believe it or not, Stockholm in February was more pleasant than Boston in March. It probably has a lot to do with the fact that we arrived completely unprepared.</p>
+							<div class="read-more"><a href="#">Continue Reading</a></div>
+						</div>
+					</article>
+					<article class="blog-post">
+						<div class="blog-post-image">
+							<a href="post.html"><img src="images/750x500-3.jpg" alt=""></a>
+						</div>
+						<div class="blog-post-body">
+							<h2><a href="post.html">Front Row Style: Our Favorite A-List Moments of Fashion Week</a></h2>
+							<div class="post-meta"><span>by <a href="#">Jamie Mooze</a></span>/<span><i class="fa fa-clock-o"></i>March 14, 2015</span>/<span><i class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
+							<p>It was our first visit to the city and, believe it or not, Stockholm in February was more pleasant than Boston in March. It probably has a lot to do with the fact that we arrived completely unprepared. Few months ago, we found ridiculously cheap plane tickets for Boston and off we went.</p>
+							<div class="read-more"><a href="#">Continue Reading</a></div>
+						</div>
+					</article-->
 
 
-    <br>
-    <div class="row" id="bannerImage">
 
-        <div id="bigBanner" class="medium-8 columns">
-            <!--p><img alt="main article image" src=
-            "img/placehold/olamide.jpg"></p-->
-        </div>
-        <div id="smallBanner" class="medium-4 columns">
-            <!--p><img alt="article promo image" src=
-            "img/placehold/kissdaniel.jpg"></p>
-            <p><img alt="article promo image" src=
-            "img/placehold/olamide2.jpg"></p-->
-        </div>
+				</div>
 
-    </div>
-    <hr>
-    <div class="row column">
-        <h4 class="text-center" style="margin: 0;">LATEST STORIES</h4>
-    </div>
-    <hr>
-    <div class="row">
-        
-        <div id="divID" class="large-8 columns" style="border-right: 1px solid #E3E5E8;"> </div>
-         
+				<div id="sidebar"></div>
+			</div>
+		</section>
+		</div><!-- /.container -->
 
-           <div id="socialmedialinks"></div>
-
-            <br><br>
-    </div>
-     
-                    <div class="large-3 columns"> <center>
-                        <a href='news.html?page=1' aria-label="Prev page" style="color:purple;">More News<span class=
-                        "show-for-sr">page</span></a></center>
-                    </div>
-                    <br><br>
-       <script type="text/javascript">
+		   <script type="text/javascript">
 
 
         function truncate( n, useWordBoundary ){
@@ -180,11 +169,9 @@ mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script><!-- end Mixpanel -->
           getBannerMusicData(function(data) {
                   console.log(data);
                    var bannerDiv=document.getElementById("bigBanner");
-                   bannerDiv.innerHTML = ("<p><a href='getnews.html?id="+data[0]._id+"'><img style='width:636px; height:305px;' alt='main article image'src='"+data[0].bannerImageURL+"'></a></p>");
-
-                   var bannerDiv2=document.getElementById("smallBanner");
-                   bannerDiv2.innerHTML = ("<p><a href='getnews.html?id="+data[1]._id+"'><img style='width:303px; height:146px;' alt='main article image'src='"+data[1].imageURL+"'></a></p><p><a href='getnews.html?id="+data[2]._id+"'><img style='width: 303px; height:146px;' alt='main article image'src='"+data[2].imageURL+"'></a></p>");               
+                   bannerDiv.innerHTML = ("<li><div class='slider-item'><img src='"+data[0].bannerImageURL+"'/><h2><a href='getnews.html?id="+data[0]._id+"' title='"+data[0].title+"'>"+data[0].title+"</a></h2></div></li><li><div class='slider-item'><img src='"+data[1].bannerImageURL+"'/><h2><a href='getnews.html?id="+data[1]._id+"' title='"+data[1].title+"'>"+data[1].title+"</a></h2></div></li><li><div class='slider-item'><img src='"+data[2].bannerImageURL+"'/><h2><a href='getnews.html?id="+data[2]._id+"' title='"+data[2].title+"'>"+data[2].title+"</a></h2></div></li>");          
           });
+//<li><div class='slider-item'><img src='"+data[0].bannerImageURL+"'/><h2><a href='getnews.html?id="+data[0]._id+"' title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your Home</a></h2></div></li>li><div class='slider-item'><img src='"+data[0].bannerImageURL+"'/><h2><a href='getnews.html?id="+data[0]._id+"' title='"+data[i].title+"'>"+data[i].title+"</a></h2></div></li>
 
           var month = new Array();
           month[0] = "January";
@@ -204,12 +191,12 @@ mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script><!-- end Mixpanel -->
 
                   for (var i = 0; i < data.length; i++) {
                    var article=document.createElement("article");
+                   article.setAttribute("class", "blog-post");
                    var newDate = new Date(data[i].date);
-                   article.innerHTML = ("<div class='row'><div class=large-6 columns'><p><a href='getnews.html?id="+data[i]._id+"'><img align='left'  class='btn-img'  alt='image for article' style='height: 200px; width: 400px; padding: 15px;' src='"+data[i].imageURL+"''></p> </a></div><div class='large-6 columns' ><h5> <a href='getnews.html?id="+data[i]._id+"'>"+data[i].title+"</a></h5><p></a></h5></div><span><i class='fi-calendar'> "+  month[newDate.getMonth()] + ' ' +  newDate.getDay() + ', ' +  newDate.getFullYear()   +"&nbsp;&nbsp;</i></span><p>"+  truncate.apply(data[i].text, [120, true]) +"<br> <a href='getnews.html?id="+data[i]._id+"'> More >> </a></p></div></div><hr />");
+                   article.innerHTML = ("<div class='blog-post-image'><a  href='post.html?id="+data[i]._id+"'><img style='width:750px; height:500px;'' src='"+data[i].imageURL+"''></a></div><div class='blog-post-body'><h2> <a href='post.html?id="+data[i]._id+"'>"+data[i].title+"</a></h2><div class='post-meta'><span>by <a href='#'>"+data[i].author+"</a></span>/<span><i class='fa fa-clock-o'></i>"+  month[newDate.getMonth()] + ' ' +  newDate.getDay() + ', ' +  newDate.getFullYear()   + "</span>/<span><i class='fa fa-comment-o'></i> <a href='getnews.html?id="+data[i]._id+"'>343</a></span></div><p>"+  truncate.apply(data[i].text, [200, true]) +" </p><div class='read-more'><a href='getnews.html?id="+data[i]._id+"'>Continue Reading</a></div></div>");
 
                     var dataContainer = document.getElementById('divID');
-                        dataContainer.setAttribute("class", "large-8 columns");
-                       dataContainer.setAttribute("style", "border-right: 1px solid #E3E5E8" );
+                        dataContainer.setAttribute("class", "col-md-8");
                    dataContainer.appendChild(article);
 
 
@@ -221,8 +208,15 @@ mixpanel.init("30c286bf70939e9de7f46b3c58bf4e84");</script><!-- end Mixpanel -->
 
       </script>
 
- 
-</body>
-<div id="footer"></div>
+   		<div id="footer"></div>
 
+
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.bxslider.js"></script>
+		<script src="js/mooz.scripts.min.js"></script>
+	</body>
 </html>
